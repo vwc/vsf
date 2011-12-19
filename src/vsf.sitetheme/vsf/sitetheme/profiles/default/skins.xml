@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="vsfTheme">
+
+ <object name="vsf_sitetheme_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="vsf.sitetheme:skins/vsf_sitetheme_custom_images"/>
+ <object name="vsf_sitetheme_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="vsf.sitetheme:skins/vsf_sitetheme_custom_templates"/>
+ <object name="vsf_sitetheme_styles"
+    meta_type="Filesystem Directory View"
+    directory="vsf.sitetheme:skins/vsf_sitetheme_styles"/>
+
+ <skin-path name="vsfTheme" based-on="Plone Classic Theme">
+  <layer name="vsf_sitetheme_custom_images"
+     insert-after="custom"/>
+  <layer name="vsf_sitetheme_custom_templates"
+     insert-after="vsf_sitetheme_custom_images"/>
+  <layer name="vsf_sitetheme_styles"
+     insert-after="vsf_sitetheme_custom_templates"/>
+ </skin-path>
+
+</object>

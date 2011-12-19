@@ -1,0 +1,2 @@
+recursive-include vsf *
+global-exclude *pyc

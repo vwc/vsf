@@ -1,0 +1,11 @@
+<div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
+
+<p tal:define="pmail string:info@vs-fischach.de">
+Volksschule Fischach-Langenneufnach   <span class="tild-orange">|</span>   
+M&uuml;hlstr. 15   86850 Fischach   <span class="tild-orange">|</span>   Tel.: 08236 1054   <span class="tild-orange">|</span>
+   Fax: 08236 1059   <span class="tild-orange">|</span>   
+<a href="" tal:replace="structure python:here.spamProtect(pmail)">
+	confuse the cat</a>
+</p>
+
+</div>

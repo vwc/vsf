@@ -1,0 +1,52 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="vsf.sitetheme">
+
+    <!-- 'vsfTheme' Zope 3 browser layer -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="vsfTheme"
+        />
+
+    <!-- Viewlets registration -->
+    <browser:viewlet
+        name="vsf.site_actions"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.SiteActionsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View" 
+	    />
+	
+	<browser:viewlet
+	    name="plone.footer"
+	    for="*"
+	    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+	    template="templates/footer.pt"
+	    layer=".interfaces.IThemeSpecific"
+	    permission="zope.Public"
+	    />
+    <!-- Zope 3 browser resources -->
+
+    <!-- Resource directory for images -->
+    <browser:resourceDirectory
+        name="vsf.sitetheme.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Resource directory for stylesheets -->
+    <browser:resourceDirectory
+        name="vsf.sitetheme.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+        />
+	<!-- Resource directory for templates -->
+	<browser:resourceDirectory
+		name="vsf.sitetheme.tempaltes"
+		directory="templates"
+		layer=".interfaces.IThemeSpecific"
+		/>
+
+</configure>

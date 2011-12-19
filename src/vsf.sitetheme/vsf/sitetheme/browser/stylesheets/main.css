@@ -1,0 +1,245 @@
+/* Stylesheet for the 'vsfTheme' Plone theme */
+
+body {
+    background: #E6F2FB;
+}
+
+#visual-site-wrapper {
+    width: 931px;
+    margin: 0px auto 0px auto;
+    background: #e8e8e8;
+    padding: 10px;
+}
+
+#site-wrapper {
+    background: white;
+}
+
+
+/** @ portal-header **/
+
+#portal-top {
+    background:url(++resource++vsf.sitetheme.images/portal-header.jpg) no-repeat 0px 0px transparent;
+}
+
+#portal-logo img {
+    margin: 0px 0px 10px 0px;
+}
+
+/** @portal sections **/
+
+#portal-globalnav {
+    padding: 0px 0px 0px 0px;
+    background:transparent;
+    white-space: normal;
+    float: right;
+    border: 0px solid red;
+    margin-top: 152px;
+}
+
+#portal-globalnav li {
+    margin: 0px 0px 0px 1px;
+    padding: 0px;
+    float: left;
+    text-align: center;
+    background:url(++resource++vsf.sitetheme.images/nav-left.gif) no-repeat top left transparent;
+}
+
+#portal-globalnav li.selected {
+    background:url(++resource++vsf.sitetheme.images/nav-left-on.gif) no-repeat top left transparent;
+}
+
+#portal-globalnav li a {
+    background:url(++resource++vsf.sitetheme.images/nav-right.gif) no-repeat top right transparent;
+    border: 0px solid white;
+/**     border-top-width: 1px; **/
+    font-size: 105%;
+    color: white;
+    border-bottom-width: 1px;
+    margin: 0px 0px 0px 0px;
+    padding: 9px 30px 5px 25px;
+    text-transform: uppercase;
+    float: left;
+}
+
+*html #portal-globalnav li a {
+    font-size: 12px;
+    padding: 9px 30px 10px 25px;
+}
+
+#portal-globalnav li a:hover {
+    color: #F29400;
+    border: 0px solid white;
+    border-bottom-width: 1px;
+    background:url(++resource++vsf.sitetheme.images/nav-right.gif) no-repeat top right transparent;
+}
+
+#portal-globalnav li.selected a {
+    background:url(++resource++vsf.sitetheme.images/nav-right-on.gif) no-repeat top right transparent;
+    color: #F29400;
+    border: 0px solid white;
+    border-bottom-width: 1px;
+}
+
+#portal-globalnav li.selected a:hover {
+    background:url(++resource++vsf.sitetheme.images/nav-right-on.gif) no-repeat top right transparent;
+}
+
+/** @ personalbar **/
+#portal-personaltools {
+    background: #E2E8F2;
+    border: none;
+    clear: both;
+}
+
+
+/** @ portal-columns **/
+
+#portal-columns-wrapper {
+    background:url(++resource++vsf.sitetheme.images/pcw.jpg) repeat-x 0px 0px transparent;
+    padding-top: 10px;
+}
+
+
+/** @ content **/
+
+.documentContent {
+    background: transparent;
+    margin-top: 20px;
+}
+
+.documentContent p a {
+    border: none;
+}
+
+span.tild-blue {
+    color: #3D64A8;
+    font-weight: bold;
+}
+
+span.tild-orange {
+    color: #F29400;
+}
+
+.documentFirstHeading {
+    color: #3D64A8;
+    border: none;
+}
+
+#content h2 {
+    color: #f29400;
+    border: none;
+}
+
+h2.tileHeadline {
+    background:url(++resource++vsf.sitetheme.images/icon_blue.jpg) 0px 0px no-repeat transparent;
+    padding: 4px 0px 5px 21px;
+}
+
+h2.tileHeadline a {
+    color:#f29400 !important;
+}
+
+#content h3 {
+    color: #3d65a8;
+}
+
+.tileItem {
+    border-top: 1px solid #f29400;
+}
+
+#content ul {
+    list-style: none;
+}
+
+#content ul li {
+    list-style: none;
+    background:url(++resource++vsf.sitetheme.images/bullet.jpg) 0px 4px transparent no-repeat;
+    padding-left: 12px;
+}
+
+/**@portletNavigation - overwrite styles for currentNode **/
+.navTreeCurrentItem {
+    background:url(++resource++vsf.sitetheme.images/navitem-current.jpg) no-repeat 0% 100% transparent !important;
+    color: #F29400 !important;
+    border: none;
+}
+li.navTreeCurrentItem {
+    display: block;
+    padding: 0 0 0 1px;
+    margin: 0 0 2px -1px;
+}
+li.navTreeCurrentItem a,
+li.navTreeCurrentItem a:hover {
+    background:url(++resource++vsf.sitetheme.images/navitem-current.jpg) no-repeat 0% 100% transparent;
+    color: #F29400 !important;
+    border: none;
+    display: block;
+    border: none;
+    min-height: 1.6em;
+    line-height: 1.6em;
+    height: auto;
+}
+
+/** @portal-siteactions **/
+
+#portal-siteactions {
+    float: none;
+    text-align: center;
+    margin-bottom: -10px;
+    background-color: white;
+}
+
+*html #portal-siteactions {
+    position: relative;
+    width: 200px;
+    margin: 0px auto -10px auto;
+    padding: 5px 10px 5px 10px;
+}
+
+#portal-siteactions li {
+    background: white;
+}
+
+#portal-siteactions li a {
+    color: #F29400;
+    text-transform: none;
+    background: white;
+}
+
+#portal-siteactions li a:hover {
+    border: 1px solid white;
+    background: transparent;
+    color: black;
+}
+
+/** @ portal-footer **/
+#portal-footer {
+    background: url(++resource++vsf.sitetheme.images/dotted.gif) repeat-x 0px 0px white;
+    border: none;
+    width: 921px;
+    margin: 0px auto;
+    color:#3D64A8;
+}
+
+#portal-footer a {
+    color: #3D64A8;
+}
+
+.navTreeItem a,
+dd.portletItem .navTreeItem a {
+    border: none;
+    display: block;
+    text-decoration: none;
+    padding: 10px 0px 10px 45px;
+    font-size: 100%;
+    font-weight: bold;
+    color: #336699;
+    background:url(++resource++vsf.sitetheme.images/navitem.jpg) no-repeat 0% 100% transparent;
+}
+
+.navTreeItem a,
+dd.portletItem .navTreeItem span {
+    padding-left: 25px;
+    display: block;
+}

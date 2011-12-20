@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+    
+ <!-- Add custom javascripts to the registry and make them
+      available when plone.app.theming is enabled -->
+ <javascript authenticated="False" cacheable="True" compression="safe"
+        conditionalcomment="" cookable="True" enabled="True"
+        expression="request/HTTP_X_THEME_ENABLED | nothing"
+        id="++theme++vsf.diazotheme/js/modernizr.js" inline="False"/>
+ <javascript authenticated="False" cacheable="True" compression="safe"
+     conditionalcomment="" cookable="True" enabled="True"
+     expression="request/HTTP_X_THEME_ENABLED | nothing"
+     id="++theme++vsf.diazotheme/js/vsf.js" inline="False"/>
+</object>

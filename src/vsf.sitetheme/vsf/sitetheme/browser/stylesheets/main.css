@@ -4,7 +4,7 @@ body {
     background: #E6F2FB;
 }
 
-#visual-site-wrapper {
+#visual-portal-wrapper {
     width: 931px;
     margin: 0px auto 0px auto;
     background: #e8e8e8;
@@ -215,6 +215,7 @@ li.navTreeCurrentItem a:hover {
 
 /** @ portal-footer **/
 #portal-footer {
+    clear:both;
     background: url(++resource++vsf.sitetheme.images/dotted.gif) repeat-x 0px 0px white;
     border: none;
     width: 921px;
@@ -242,4 +243,8 @@ dd.portletItem .navTreeItem a {
 dd.portletItem .navTreeItem span {
     padding-left: 25px;
     display: block;
+}
+
+.visualClear {
+    clear:both;
 }

@@ -43,6 +43,8 @@
         
         <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 	    
+	    <replace css:content="#portal-personaltools-wrapper" css:theme-children="#personal-tools"
+	        css:if-content="#user-name" />
 	    <replace css:content="#portal-siteactions" css:theme="#actions" />
 	    
 	    <!-- navigation -->

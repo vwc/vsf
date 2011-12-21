@@ -557,7 +557,7 @@ dl.portlet dt, div.portletAssignments div.portletHeader {
   font-weight: bold;
   line-height: 14px;
 }
-.portletEvents dt, .QuickUploadPortlet dt {
+.portletEvents dt, .QuickUploadPortlet dt, .portletGoogleAnalytics dt {
   top: -15px;
   left: -15px;
 }
@@ -1244,6 +1244,8 @@ dl.actionMenu.activated dt a, dl.actionMenu.activated dd a, dl.actionMenu.activa
   margin-bottom: 1em;
   list-style: none;
   display: block;
+  background: transparent;
+  display: inline-block;
 }
 #content ul.configlets li a {
   text-decoration: none;
@@ -1926,8 +1928,9 @@ div.overlay .formControls a {
 #portal-siteactions {
   float: none;
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
   background-color: white;
+  font-size: 80%;
 }
 *html #portal-siteactions {
   position: relative;

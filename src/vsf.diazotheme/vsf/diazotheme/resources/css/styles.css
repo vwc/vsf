@@ -574,6 +574,9 @@ dl.portlet dt, div.portletAssignments div.portletHeader {
   text-indent: -3000px;
   overflow: hidden;
 }
+.portletNavigationTree dd.portletItem {
+  margin-top: -20px;
+}
 dl.portlet dt.hiddenStructure {
   padding: 0;
 }
@@ -646,27 +649,33 @@ a.managePortletsFallback {
 /* @end */
 /* @group Navigation portlet */
 dl.portlet ul.navTree li a {
-  border: none;
+  border: 0px !important;
   display: block;
   zoom: 1;
+  color: #3d64a8 !important;
+  border: none !important;
+  font-weight: bold;
+}
+dl.portlet ul.navTree li a:hover {
+  color: #f89406 !important;
 }
 dl.portletNavigationTree dd.portletItem {
   padding: 0;
 }
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-  padding: 0.25em 1em;
-  border-bottom: 0.1em dotted #ddd;
-  line-height: 2em;
+  padding: 1em 0em 1em 4em;
+  border-bottom: 0em dotted #ddd;
+  line-height: 3em;
+  background: url(../images/navitem.jpg) no-repeat 0 100% transparent;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem {
   padding-left: 0.5em;
   line-height: 2em;
 }
 dl.portlet ul.navTree .navTreeCurrentItem {
-  background-color: #ddd;
-  border-left: 1em solid #ddd;
-  margin-left: -1em;
-  margin-right: -1em;
+  background: transparent;
+  border-right: 1em solid #ddd;
+  color: #f89406 !important;
 }
 /* @end */
 /* @group Content Area */

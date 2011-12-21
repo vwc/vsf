@@ -25,3 +25,6 @@ class Dashboard(grok.View):
         if not mtool.isAnonymousUser():
             member = mtool.getAuthenticatedMember()
             return member
+
+    def render(self):
+        return ''

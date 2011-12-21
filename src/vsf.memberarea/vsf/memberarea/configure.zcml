@@ -25,6 +25,11 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <!-- -*- extra stuff goes here -*- -->
+  <plone:behavior
+      title="Quickupload"
+      description="Mark content as quickupload capable"
+      provides="collective.quickupload.browser.interfaces.IQuickUploadCapable"
+      />
+
 
 </configure>

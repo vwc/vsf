@@ -4,11 +4,16 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
-    <theme href="theme.html" css:if-content="#visual-portal-wrapper" />
+    
+    <theme href="reduced.html" css:if-content="body.section-front-page" />
     
     <!-- Apply rules to a standard Plone Webpage -->
     <rules css:if-content="#visual-portal-wrapper">
-    
+        
+        <!-- Default theme template -->
+        <theme href="theme.html" />
+        <notheme if="$ajax_load" />
+        
         <!-- Head: title -->
         <replace css:theme="title" css:content="title" />
         <!-- Base tag -->
@@ -38,7 +43,7 @@
         
         <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 	    
-	    <replace css:content="#portal-siteactions li" css:theme-children="#actions" />
+	    <replace css:content="#portal-siteactions" css:theme="#actions" />
 	    
 	    <!-- navigation -->
         <replace css:content="#portal-globalnav li" css:theme-children="#main-nav" />
@@ -47,8 +52,10 @@
         <replace css:content="#portal-breadcrumbs" css:theme="#pathbar" />
         <drop css:content="#breadcrumbs-you-are-here" />
 	    
-	    <!-- Copy over the contents of the page body -->
-	    <replace css:content-children="#content" css:theme-children="#content" />
+	    <!-- Document Content -->
+        <replace css:content-children="#content" css:theme-children="#content" />
+        <before css:content="#edit-bar" css:theme="#main-content" />
+        <before css:content=".portalMessage" css:theme="#content" />
         
         <!-- Portal Columns -->
         <replace css:content-children="#portal-column-one > *" css:theme-children="#sidebar-left" />
@@ -59,7 +66,7 @@
 	    <drop css:content="span.portletTopRight" />
 	    <drop css:content="span.portletBottomLeft" />
 	    <drop css:content="span.portletBottomRight" />
-
+        
     </rules>
     
 </rules>

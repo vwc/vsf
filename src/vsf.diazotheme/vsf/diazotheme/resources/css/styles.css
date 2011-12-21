@@ -557,7 +557,7 @@ dl.portlet dt, div.portletAssignments div.portletHeader {
   font-weight: bold;
   line-height: 14px;
 }
-.portletEvents dt {
+.portletEvents dt, .QuickUploadPortlet dt {
   top: -15px;
   left: -15px;
 }
@@ -593,8 +593,23 @@ dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover {
   display: block;
   border: none;
 }
+dl.portlet dt a:link.tile, dl.portlet dt a:visited.tile, dl.portlet dt a:hover.tile {
+  font-weight: bold;
+}
 dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd {
   padding: 1em;
+}
+dd.portletFooter {
+  font-size: 80%;
+  text-align: right;
+}
+dd.portletItem {
+  border-bottom: 0.1em solid #bfbfbf;
+}
+.portletItemDetails {
+  color: #545454;
+  display: block;
+  margin: 0;
 }
 div.managePortletsLink, a.managePortletsFallback {
   text-align: center;
@@ -698,15 +713,15 @@ dl.portlet {
   margin-bottom: 1em;
 }
 #content a:link, dl.portlet a:link {
-  color: #205c90;
-  border-bottom: 0.1em solid #ccc;
+  color: #3d64a8;
+  border-bottom: 0em solid #ccc;
 }
 #content a:visited, dl.portlet a:visited {
-  color: #427597;
-  border-bottom: 0.1em solid #ccc;
+  color: #3d64a8;
+  border-bottom: 0em solid #ccc;
 }
 #content a:hover, dl.portlet a:hover {
-  color: #75ad0a !important;
+  color: #f89406 !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 
 }
@@ -751,6 +766,11 @@ dl.portlet {
   margin-bottom: 0.25em;
   line-height: 1.5em;
   display: list-item;
+}
+#content ul li {
+  list-style: none;
+  background: url(../images/bullet.jpg) 0px 4px transparent no-repeat;
+  padding-left: 12px;
 }
 #content dt {
   font-weight: bold;
@@ -1020,16 +1040,17 @@ dl.error dd {
   border: 0.3em solid #ddd;
 }
 #edit-bar {
-  background-color: #333;
-  border: 0.25em solid #333;
-  font-size: 80%;
+  background-color: #000000;
+  border: 0.25em solid #000000;
+  font-size: 70%;
   min-height: 2em;
+  margin-top: 0.5em;
   margin-bottom: 1em;
   padding-top: 0.05em;
 }
 #content-views {
   float: left;
-  background-color: #333;
+  background-color: #000000;
 }
 #content-views a {
   color: White;
@@ -1049,6 +1070,9 @@ dl.error dd {
 #content li.formTab {
   display: inline;
   margin-right: 0.25em;
+  background: transparent;
+  padding: 0;
+  font-size: 12px;
 }
 #content-views a, #content li.formTab a {
   /* this isn't supported by all browsers, so we keep it in a separate rule */
@@ -1130,12 +1154,12 @@ dl.error dd {
 /* @end */
 /* @group Content pulldowns */
 #contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
-  background-color: #333;
+  background-color: #000000;
   color: White;
   z-index: 5;
 }
 #contentActionMenus dl.actionMenu.activated dd {
-  border-bottom: 0.5em solid #333;
+  border-bottom: 0.5em solid #000000;
   right: -3px;
 }
 #contentActionMenus dl.actionMenu.activated dd a:hover, #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
@@ -1154,10 +1178,10 @@ dl.error dd {
 /* @end */
 #contentActionMenus {
   float: right;
-  background: #75ad0a;
+  background: #000000;
   margin: 0;
   position: relative;
-  top: -0.23em;
+  top: 0.85em;
   right: -0.24em;
   padding: 0.1em 0.24em 0 0;
   border-radius: 0.5em;
@@ -1410,6 +1434,50 @@ dd.image-caption {
   font-size: 85%;
 }
 /* @end */
+/* @group Album view classes */
+.photoAlbumEntry {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  height: 185px;
+  width: 143px;
+  margin: 0em;
+  padding: 0px 6px 0px 9px;
+  text-align: center;
+  background-image: url(../images/polaroid-single.png);
+  background-repeat: no-repeat;
+}
+.photoAlbumEntry img {
+  border: 1px solid #ccc;
+  display: block;
+  margin: 0 auto;
+}
+.photoAlbumEntryWrapper {
+  /*display: block;*/
+
+  height: 130px;
+  width: 128px;
+  margin-bottom: 7px;
+}
+.photoAlbumEntry a {
+  display: block;
+  text-decoration: none;
+  font-size: 90%;
+  height: 169px;
+  width: 130px;
+  margin: 16px auto 0px;
+}
+.photoAlbumFolder {
+  background-image: url(../images/polaroid-multi.png);
+  background-repeat: no-repeat;
+}
+.photoAlbumEntryTitle {
+  color: #3d64a8;
+  display: block;
+  width: 128px;
+  height: 3.6em;
+}
+/* @end */
 /* @group Forms */
 fieldset, .editionComment {
   line-height: 1.5em;
@@ -1542,6 +1610,112 @@ textarea#form\.description {
 }
 table.listing tbody tr.odd.selected td, tr.selected {
   background-color: #ffa;
+}
+.btn, input[type=submit] {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  padding: 5px 14px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+.btn:hover, input[type=submit]:hover {
+  background-position: 0 -15px;
+  color: #333;
+  text-decoration: none;
+}
+.btn:focus, input[type=submit]:focus {
+  outline: 1px dotted #666;
+}
+.btn.primary, input[type=submit].primary {
+  color: #ffffff;
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#3d64a8), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #3d64a8, #0064cd);
+  background-image: -ms-linear-gradient(top, #3d64a8, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3d64a8), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #3d64a8, #0064cd);
+  background-image: -o-linear-gradient(top, #3d64a8, #0064cd);
+  background-image: linear-gradient(top, #3d64a8, #0064cd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d64a8', endColorstr='#0064cd', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.btn.active,
+input[type=submit].active,
+.btn :active,
+input[type=submit] :active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn.disabled, input[type=submit].disabled {
+  cursor: default;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=65);
+  -khtml-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn[disabled], input[type=submit][disabled] {
+  cursor: default;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=65);
+  -khtml-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn.large, input[type=submit].large {
+  font-size: 15px;
+  line-height: normal;
+  padding: 9px 14px 9px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.btn.small, input[type=submit].small {
+  padding: 7px 9px 7px;
+  font-size: 11px;
+}
+:root .alert-message, :root .btn {
+  border-radius: 0 \0;
+}
+button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
 /* @group Login form */
 body.template-logged_out #content, body.template-login_form #content, .pb-ajax #login-form {

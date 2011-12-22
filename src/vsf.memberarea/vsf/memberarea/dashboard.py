@@ -13,11 +13,9 @@ class Dashboard(grok.View):
 
     def update(self):
         if self.member_info():
-            mtool = getToolByName(self.context, 'portal_membership')
-            member = mtool.getAUtehnticatedMember()
+            member = self.member_info()
             home_folder = member.getHomeFolder().absolute_url()
-            return self.request.response.redirect(
-                home_folder+'/@@profile-dashboard')
+            return self.request.response.redirect(home_folder)
 
     def member_info(self):
         context = aq_inner(self.context)

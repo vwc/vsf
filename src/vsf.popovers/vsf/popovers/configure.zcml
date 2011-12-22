@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="vsf.popovers">
+
+  <five:registerPackage package="." initialize=".initialize" />
+  <includeDependencies package="." />
+  <grok:grok package="." />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="vsf.popovers"
+      directory="profiles/default"
+      description="Installs the vsf.popovers package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  
+</configure>

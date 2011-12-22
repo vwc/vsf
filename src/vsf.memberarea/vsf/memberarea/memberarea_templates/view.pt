@@ -8,9 +8,68 @@
 <body>
 
 <metal:main fill-slot="main">
-  <metal:content-core define-macro="main">
+  <metal:content-core define-macro="main"
+    tal:define="mtool context/portal_membership;
+                memberinfo context/portal_membership/getMemberInfo;
+                member context/@@plone_portal_state/member;
+                name python:memberinfo['fullname'] or member.getId() or member.getId();
+                portal_url context/portal_url;
+                portrait python: mtool.getPersonalPortrait(id=member.getId());
+                authorinfo python: mtool.getMemberInfo(member);
+                portal_url context/@@plone_portal_state/navigation_root_url;
+                here_url context/@@plone_context_state/object_url;
+                portal context/@@plone_portal_state/portal;
+                email_from_address portal/email_from_address;
+                toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
+    
+    <div tal:condition="view/is_owner" 
+        class="alert-message block-message notice fade in" data-alert="alert">
+            <p><strong>Wilkommen <span tal:replace="context/Title" /></strong></p>
+            <p>Ihr Benutzerordner wurde erfolgreich erstellt.</p>
+            <p>Da Sie Ihren Benutzerordner zum ersten Mal besuchen, sollten
+                Sie zun&auml;chst einige Informationen hinterlegen.</p>
+    </div>
+    
+    <div class="well">
+        <h1 class="documentFirstHeading" tal:content="context/Title">Title inserted here</h1>
+        <p class="documentDescription" tal:condition="context/Description"
+            tal:content="context/Description">Description</p>
+        <tal:actions tal:condition="view/is_owner">
+            <a href="" class="btn popoverForm"
+                tal:attributes="href python:portal_url+'/@@personal-information'">
+                Persönliche Informationen bearbeiten</a>
+            <a href="" class="btn popoverForm"
+                tal:attributes="href python:here_url+'/@@edit'">Benutzerordner bearbeiten</a>
+        </tal:actions>
+    </div>
+    
+    <section>
+        <h2>Vorhandene Dateien:</h2>
+        <table class="listing">
+            <thead>
+                <tr>
+                    <th>Dateiname</th>
+                    <th>Datum</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tal:block tal:repeat="item view/contained_files">
+                <tr>
+                    <td tal:content="item/Title">Title</td>
+                    <td tal:define="modified item/modified">
+                        <span tal:replace="python:toLocalizedTime(modified)" />
+                        (<span tal:replace="python:toLocalizedTime(modified, time_only=1)" />)
+                    </td>
+                    <td><a href="" tal:attributes="href item/absolute_url"
+                          class="btn">Download</a>
+                    </td>
+                </tr>
+                </tal:block>
+            </tbody>
+        </table>
+    </section>
 
-    <h1 class="documentFirstHeading" tal:content="context/Title">Title inserted here</h1>
     
   </metal:content-core>
 </metal:main>

@@ -290,19 +290,19 @@ html, body {
 #inner-wrapper {
   margin: 0px auto;
   background: #e8e8e8;
-  width: 940px;
-  padding: 10px;
+  width: 950px;
+  padding: 5px;
 }
 #top-wrapper {
-  background: #d7d7d7;
+  background: transparent;
 }
 #header-wrapper {
   margin: 0px auto;
-  width: 940px;
+  width: 950px;
 }
 #content-wrapper {
   margin: 0px auto;
-  width: 940px;
+  width: 950px;
 }
 #main-content {
   border: 0px solid red;
@@ -312,8 +312,8 @@ html, body {
 /* @end */
 /* @group Header */
 #header {
-  width: 931px;
-  background: url(../images/portal-header.jpg) no-repeat 0 0 transparent;
+  width: 950px;
+  background: url(../images/header.jpg) no-repeat 100% 0 transparent;
   height: 188px;
 }
 #header a {
@@ -408,6 +408,7 @@ html, body {
   right: 0;
   padding: 0.25em 0.5em;
   font-size: 80%;
+  border: 1px solid #ffffff;
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
   -webkit-border-bottom-right-radius: 0.5em;
@@ -720,6 +721,7 @@ h2.tileHeadline a {
 dl.portlet p,
 dl.portlet {
   margin-bottom: 1em;
+  line-height: 120%;
 }
 #content a:link, dl.portlet a:link {
   color: #3d64a8;
@@ -740,6 +742,9 @@ dl.portlet {
 #content span.link-external a {
   background: transparent url(link_icon.png) 0px 1px no-repeat;
   padding: 1px 0px 1px 16px;
+}
+#content strong {
+  font-weight: bold;
 }
 #category {
   font-size: 75%;
@@ -867,6 +872,24 @@ dl.portlet {
   float: right;
   clear: right;
   margin: 0 0 0.5em 1em;
+}
+.well {
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  padding: 19px;
+  min-height: 20px;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
 }
 /* @end */
 /* @group Data tables */
@@ -1901,6 +1924,108 @@ div.overlay .formControls a {
   padding: 0 0.5em;
 }
 /* @end */
+.alert-message {
+  position: relative;
+  padding: 7px 15px;
+  margin-bottom: 18px;
+  color: #404040;
+  background-color: #eedc94;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fceec1), to(#eedc94));
+  background-image: -moz-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -ms-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fceec1), color-stop(100%, #eedc94));
+  background-image: -webkit-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -o-linear-gradient(top, #fceec1, #eedc94);
+  background-image: linear-gradient(top, #fceec1, #eedc94);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceec1', endColorstr='#eedc94', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #eedc94 #eedc94 #e4c652;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.alert-message .close {
+  margin-top: 1px;
+  *margin-top: 0;
+}
+.alert-message a {
+  font-weight: bold;
+  color: #404040;
+}
+.alert-message.danger p a,
+.alert-message.error p a,
+.alert-message.success p a,
+.alert-message.info p a {
+  color: #ffffff;
+}
+.alert-message h5 {
+  line-height: 18px;
+}
+.alert-message p {
+  margin-bottom: 0;
+}
+.alert-message div {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  line-height: 28px;
+}
+.alert-message .btn {
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.alert-message.block-message {
+  background-image: none;
+  background-color: #fdf5d9;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  padding: 14px;
+  border-color: #fceec1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.alert-message.block-message ul, .alert-message.block-message p {
+  margin-right: 30px;
+}
+.alert-message.block-message ul {
+  margin-bottom: 0;
+}
+.alert-message.block-message li {
+  color: #404040;
+}
+.alert-message.block-message .alert-actions {
+  margin-top: 5px;
+}
+.alert-message.block-message.error, .alert-message.block-message.success, .alert-message.block-message.info {
+  color: #404040;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.alert-message.block-message.error {
+  background-color: #fddfde;
+  border-color: #fbc7c6;
+}
+.alert-message.block-message.success {
+  background-color: #d1eed1;
+  border-color: #bfe7bf;
+}
+.alert-message.block-message.info {
+  background-color: #ddf4fb;
+  border-color: #c6edf9;
+}
+.alert-message.block-message.danger p a,
+.alert-message.block-message.error p a,
+.alert-message.block-message.success p a,
+.alert-message.block-message.info p a {
+  color: #404040;
+}
 /* @group Footer */
 #footer-wrapper {
   /* Sticky footer */

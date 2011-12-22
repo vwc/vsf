@@ -6,6 +6,7 @@
     
     
     <theme href="reduced.html" css:if-content="body.section-front-page" />
+    <theme href="reduced.html" css:if-content="body.section-Members" />
     
     <!-- Apply rules to a standard Plone Webpage -->
     <rules css:if-content="#visual-portal-wrapper">

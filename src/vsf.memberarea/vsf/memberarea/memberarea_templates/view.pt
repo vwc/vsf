@@ -36,7 +36,8 @@
                         tal:attributes="href python:here_url+'/@@edit'">Benutzerordner bearbeiten</a>
         </div>
         <div class="alert-message block-message notice fade in">
-            <p><strong>Willkommen <span tal:replace="name" /></strong></p>
+            <p><strong>Willkommen <span tal:replace="name" />,<br />
+                dies ist Ihr Benutzerordner/Arbeitsbereich.</strong></p>
             <p>Verwenden Sie die Aktionsbox auf der rechten
                 Seite, um neue Dateien hochzuladen.</p>
             <p>Um die in Ihrem Benutzerkonto hinterlegten pers&ouml;nlichen Informationen

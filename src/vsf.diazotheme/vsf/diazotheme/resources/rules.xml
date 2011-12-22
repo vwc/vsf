@@ -4,15 +4,17 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
-    
-    <theme href="reduced.html" css:if-content="body.section-front-page" />
-    <theme href="reduced.html" css:if-content="body.section-Members" />
+    <theme href="theme.html" css:if-content="body.section-schule" />
+    <theme href="theme.html" css:if-content="body.section-menschen" />
+    <theme href="theme.html" css:if-content="body.section-leben_und_lernen" />
+    <theme href="theme.html" css:if-content="body.section-infos" />
+    <theme href="theme.html" css:if-content="body.section-links" />
     
     <!-- Apply rules to a standard Plone Webpage -->
     <rules css:if-content="#visual-portal-wrapper">
         
         <!-- Default theme template -->
-        <theme href="theme.html" />
+        <theme href="reduced.html" />
         <notheme if="$ajax_load" />
         
         <!-- Head: title -->

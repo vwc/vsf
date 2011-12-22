@@ -54,7 +54,8 @@ class View(grok.View):
         catalog = getToolByName(context, 'portal_catalog')
         results = catalog(object_provides=IFileContent.__identifier__,
                           path='/'.join(context.getPhysicalPath()),
-                          sort_on='modified')
+                          sort_on='modified',
+                          sort_order='reverse')
         return results
 
     def is_owner(self):

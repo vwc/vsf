@@ -290,7 +290,7 @@ html, body {
 #inner-wrapper {
   margin: 0px auto;
   background: #e8e8e8;
-  width: 950px;
+  width: 960px;
   padding: 5px;
 }
 #top-wrapper {
@@ -298,11 +298,11 @@ html, body {
 }
 #header-wrapper {
   margin: 0px auto;
-  width: 950px;
+  width: 960px;
 }
 #content-wrapper {
   margin: 0px auto;
-  width: 950px;
+  width: 960px;
 }
 #main-content {
   border: 0px solid red;
@@ -312,7 +312,7 @@ html, body {
 /* @end */
 /* @group Header */
 #header {
-  width: 950px;
+  width: 960px;
   background: url(../images/header.jpg) no-repeat 100% 0 transparent;
   height: 188px;
 }
@@ -1474,12 +1474,14 @@ dd.image-caption {
   position: relative;
   overflow: hidden;
   height: 185px;
-  width: 143px;
-  margin: 0em;
+  width: 195px;
+  margin: 0 10px 10px 0;
   padding: 0px 6px 0px 9px;
   text-align: center;
-  background-image: url(../images/polaroid-single.png);
-  background-repeat: no-repeat;
+  border: 1px solid #808080;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .photoAlbumEntry img {
   border: 1px solid #ccc;
@@ -1500,10 +1502,6 @@ dd.image-caption {
   height: 169px;
   width: 130px;
   margin: 16px auto 0px;
-}
-.photoAlbumFolder {
-  background-image: url(../images/polaroid-multi.png);
-  background-repeat: no-repeat;
 }
 .photoAlbumEntryTitle {
   color: #3d64a8;
@@ -1685,7 +1683,7 @@ table.listing tbody tr.odd.selected td, tr.selected {
   outline: 1px dotted #666;
 }
 .btn.primary, input[type=submit].primary {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #0064cd;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#3d64a8), to(#0064cd));
@@ -1698,6 +1696,22 @@ table.listing tbody tr.odd.selected td, tr.selected {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d64a8', endColorstr='#0064cd', GradientType=0);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.btn.cta, input[type=submit].cta {
+  color: #ffffff !important;
+  background-color: #000000;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#545454), to(#000000));
+  background-image: -moz-linear-gradient(top, #545454, #000000);
+  background-image: -ms-linear-gradient(top, #545454, #000000);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #545454), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(top, #545454, #000000);
+  background-image: -o-linear-gradient(top, #545454, #000000);
+  background-image: linear-gradient(top, #545454, #000000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#545454', endColorstr='#000000', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #000000 #000000 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn.active,
@@ -1750,6 +1764,12 @@ input[type=submit] :active {
 button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
 }
 /* @group Login form */
 body.template-logged_out #content, body.template-login_form #content, .pb-ajax #login-form {

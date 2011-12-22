@@ -133,7 +133,7 @@ html, body {
 #inner-wrapper {
     margin: 0px auto;
     background: #e8e8e8;
-    width:950px;
+    width:960px;
     padding:5px;
 }
 
@@ -143,12 +143,12 @@ html, body {
 
 #header-wrapper {
     margin:0px auto;
-    width:950px;
+    width:960px;
 }
 
 #content-wrapper {
     margin: 0px auto;
-    width:950px;
+    width:960px;
 }
 
 #main-content {
@@ -163,7 +163,7 @@ html, body {
 /* @group Header */
 
 #header {
-    width:950px;
+    width:960px;
     background:url(../images/header.jpg) no-repeat 100% 0 transparent;
     height: 188px;
     a {
@@ -1518,12 +1518,14 @@ dd.image-caption {
     position:relative;
     overflow: hidden;
     height: 185px;
-    width: 143px;
-    margin: 0em;
+    width: 195px;
+    margin: 0 10px 10px 0;
     padding: 0px 6px 0px 9px;
     text-align: center;
-    background-image: url(../images/polaroid-single.png);
-    background-repeat: no-repeat;
+    //background-image: url(../images/polaroid-single.png);
+    //background-repeat: no-repeat;
+    border: 1px solid @gray;
+    .border-radius(4px);
 }
 .photoAlbumEntry img {
     border: 1px solid #ccc;
@@ -1545,8 +1547,8 @@ dd.image-caption {
     margin: 16px auto 0px;
 }
 .photoAlbumFolder {
-    background-image: url(../images/polaroid-multi.png);
-    background-repeat: no-repeat;
+    //background-image: url(../images/polaroid-multi.png);
+    //background-repeat: no-repeat;
 }
 .photoAlbumEntryTitle {
     color: @blue;
@@ -1554,6 +1556,7 @@ dd.image-caption {
     width: 128px;
     height: 3.6em;
 }
+
 
 /* @end */
 
@@ -1741,8 +1744,12 @@ input[type=submit] {
 
   // Primary Button Type
   &.primary {
-    color: @white;
+    color: @white !important;
     .gradientBar(@blue, @blueDark)
+  }
+  &.cta {
+      color:@white !important;
+      .gradientBar(@color, @black)
   }
 
    // Transitions
@@ -1796,6 +1803,14 @@ input[type=submit].btn {
   	padding: 0;
   	border: 0;
   }
+}
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
 }
 
 /* @group Login form */

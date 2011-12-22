@@ -22,25 +22,41 @@
                 email_from_address portal/email_from_address;
                 toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
     
-    <div tal:condition="view/is_owner" 
-        class="alert-message block-message notice fade in" data-alert="alert">
-            <p><strong>Wilkommen <span tal:replace="context/Title" /></strong></p>
+    <tal:block tal:condition="view/is_owner">
+        <div class="alert-message block-message notice fade in" data-alert="alert"
+            tal:condition="not:context/text">
+            <p><strong>Willkommen <span tal:replace="name" /></strong></p>
             <p>Ihr Benutzerordner wurde erfolgreich erstellt.</p>
             <p>Da Sie Ihren Benutzerordner zum ersten Mal besuchen, sollten
                 Sie zun&auml;chst einige Informationen hinterlegen.</p>
-    </div>
+                    <a href="" class="btn small popoverForm"
+                        tal:attributes="href python:portal_url+'/@@personal-information'">
+                        Pers&ouml;nliche Informationen bearbeiten</a>
+                    <a href="" class="btn small popoverForm"
+                        tal:attributes="href python:here_url+'/@@edit'">Benutzerordner bearbeiten</a>
+        </div>
+        <div class="alert-message block-message notice fade in">
+            <p><strong>Willkommen <span tal:replace="name" /></strong></p>
+            <p>Verwenden Sie die Aktionsbox auf der rechten
+                Seite, um neue Dateien hochzuladen.</p>
+            <p>Um die in Ihrem Benutzerkonto hinterlegten pers&ouml;nlichen Informationen
+                zu bearbeiten klicken Sie bitte
+                <a href="" class="popoverForm"
+                    tal:attributes="href python:portal_url+'/@@personal-information'">
+                    hier</a>.
+            </p>
+        </div>
+    </tal:block>
     
     <div class="well">
+        <a href="" class="btn primary small popoverForm pull-right"
+            tal:condition="view/is_owner"
+            tal:attributes="href python:here_url+'/@@edit'">Bearbeiten</a>
         <h1 class="documentFirstHeading" tal:content="context/Title">Title inserted here</h1>
         <p class="documentDescription" tal:condition="context/Description"
             tal:content="context/Description">Description</p>
-        <tal:actions tal:condition="view/is_owner">
-            <a href="" class="btn popoverForm"
-                tal:attributes="href python:portal_url+'/@@personal-information'">
-                Persönliche Informationen bearbeiten</a>
-            <a href="" class="btn popoverForm"
-                tal:attributes="href python:here_url+'/@@edit'">Benutzerordner bearbeiten</a>
-        </tal:actions>
+        <div tal:condition="context/text"
+            tal:content="structure context/text/output" />
     </div>
     
     <section>
@@ -61,8 +77,8 @@
                         <span tal:replace="python:toLocalizedTime(modified)" />
                         (<span tal:replace="python:toLocalizedTime(modified, time_only=1)" />)
                     </td>
-                    <td><a href="" tal:attributes="href item/absolute_url"
-                          class="btn">Download</a>
+                    <td><a href="" tal:attributes="href item/getURL"
+                          class="btn primary">Download</a>
                     </td>
                 </tr>
                 </tal:block>

@@ -9,9 +9,10 @@
  * Date: @DATE
  */
 /* Reset.less
- * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -76,7 +77,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 li {
@@ -97,7 +99,8 @@ html {
 a:focus {
   outline: thin dotted;
 }
-a:hover, a:active {
+a:hover,
+a:active {
   outline: 0;
 }
 article,
@@ -112,7 +115,9 @@ nav,
 section {
   display: block;
 }
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -120,7 +125,8 @@ audio, canvas, video {
 audio:not([controls]) {
   display: none;
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -145,11 +151,13 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button, input {
+button,
+input {
   line-height: normal;
   *overflow: visible;
 }
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -207,7 +215,8 @@ h6 {
   color: Black;
   line-height: 1.5em;
 }
-h1, h2 {
+h1,
+h2 {
   letter-spacing: -0.05em;
 }
 h1 {
@@ -235,10 +244,13 @@ h5,
 h6 {
   color: #545454;
 }
-h2 a, h3 a, h4 a {
+h2 a,
+h3 a,
+h4 a {
   border-bottom: none !important;
 }
-a:link, a:visited {
+a:link,
+a:visited {
   color: #205c90;
 }
 a:focus img {
@@ -274,7 +286,8 @@ q {
 }
 /* @end */
 /* @group wrapper elements */
-html, body {
+html,
+body {
   /* Sticky footer */
 
   height: 100%;
@@ -389,7 +402,8 @@ html, body {
 
   border: 0.1em solid white;
 }
-#portal-globalnav .selected a, #portal-globalnav a:hover {
+#portal-globalnav .selected a,
+#portal-globalnav a:hover {
   background: url(../images/nav-left-on.gif) no-repeat top left transparent;
   color: #f89406;
 }
@@ -399,7 +413,9 @@ html, body {
 }
 #portal-personaltools {
   float: right;
-  background: #e3e3e3;
+  margin-bottom: 10px;
+  width: 93%;
+  background: #3d64a8;
   position: relative;
   z-index: 3;
   /* personaltools should be above #portal-header (with z-index: 2) */
@@ -409,16 +425,11 @@ html, body {
   padding: 0.25em 0.5em;
   font-size: 80%;
   border: 1px solid #ffffff;
-  border-bottom-right-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
-  -webkit-border-bottom-right-radius: 0.5em;
-  -webkit-border-bottom-left-radius: 0.5em;
-  -moz-border-radius-bottomleft: 0.5em;
-  -moz-border-radius-bottomright: 0.5em;
 }
 #portal-personaltools #anon-personalbar a {
-  float: left;
+  float: right;
   margin-right: 0.5em;
+  color: #ffffff;
 }
 /** @portal sections **/
 #main-nav {
@@ -531,7 +542,8 @@ dl.portlet {
   padding: 5px;
   margin-bottom: 5px;
 }
-dl.portlet.blue, dl.portlet.portletNavigationTree {
+dl.portlet.blue,
+dl.portlet.portletNavigationTree {
   border-color: #3d64a8;
 }
 dl.portlet.portletStaticText {
@@ -546,7 +558,8 @@ dl.portlet.portletStaticText {
 dl.portletError {
   background-color: #FFA500;
 }
-dl.portlet dt, div.portletAssignments div.portletHeader {
+dl.portlet dt,
+div.portletAssignments div.portletHeader {
   padding: 1em 0px 1.5em 60px;
   background: #ddd;
   line-height: normal;
@@ -558,7 +571,9 @@ dl.portlet dt, div.portletAssignments div.portletHeader {
   font-weight: bold;
   line-height: 14px;
 }
-.portletEvents dt, .QuickUploadPortlet dt, .portletGoogleAnalytics dt {
+.portletEvents dt,
+.QuickUploadPortlet dt,
+.portletGoogleAnalytics dt {
   top: -15px;
   left: -15px;
 }
@@ -592,15 +607,21 @@ div.portletAssignments .managedPortletActions a {
   margin: 0 0.25em;
   border: none;
 }
-dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover {
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
   color: black;
   display: block;
   border: none;
 }
-dl.portlet dt a:link.tile, dl.portlet dt a:visited.tile, dl.portlet dt a:hover.tile {
+dl.portlet dt a:link.tile,
+dl.portlet dt a:visited.tile,
+dl.portlet dt a:hover.tile {
   font-weight: bold;
 }
-dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd {
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
+dl.portletError dd {
   padding: 1em;
 }
 dd.portletFooter {
@@ -615,7 +636,8 @@ dd.portletItem {
   display: block;
   margin: 0;
 }
-div.managePortletsLink, a.managePortletsFallback {
+div.managePortletsLink,
+a.managePortletsFallback {
   text-align: center;
   padding: 0.25em 0.5em;
   font-size: 80%;
@@ -723,15 +745,18 @@ dl.portlet {
   margin-bottom: 1em;
   line-height: 120%;
 }
-#content a:link, dl.portlet a:link {
+#content a:link,
+dl.portlet a:link {
   color: #3d64a8;
   border-bottom: 0em solid #ccc;
 }
-#content a:visited, dl.portlet a:visited {
+#content a:visited,
+dl.portlet a:visited {
   color: #3d64a8;
   border-bottom: 0em solid #ccc;
 }
-#content a:hover, dl.portlet a:hover {
+#content a:hover,
+dl.portlet a:hover {
   color: #f89406 !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 
@@ -772,11 +797,13 @@ dl.portlet {
   list-style-type: disc;
   margin-left: 2em;
 }
-#content ol, dl.portlet ol {
+#content ol,
+dl.portlet ol {
   list-style-type: decimal;
   margin-left: 2em;
 }
-#content li, dl.portlet li {
+#content li,
+dl.portlet li {
   margin-bottom: 0.25em;
   line-height: 1.5em;
   display: list-item;
@@ -815,7 +842,8 @@ dl.portlet {
   display: block;
   color: #666;
 }
-#content .discreet, #sidebar .discreet {
+#content .discreet,
+#sidebar .discreet {
   color: #666;
   font-size: 85%;
   font-weight: normal;
@@ -845,12 +873,14 @@ dl.portlet {
   border-collapse: collapse;
   border-spacing: 0px;
 }
-#content .documentDescription, #content #description {
+#content .documentDescription,
+#content #description {
   color: #666;
   margin-left: 0;
   font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
 }
-#content img.tileImage, #content div.newsImageContainer {
+#content img.tileImage,
+#content div.newsImageContainer {
   float: right;
   margin: 0 1em 0.5em 1em;
 }
@@ -893,7 +923,8 @@ dl.portlet {
 }
 /* @end */
 /* @group Data tables */
-table.listing, table.plain {
+table.listing,
+table.plain {
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -906,10 +937,12 @@ table.listing th {
   padding: 0.5em 1em;
   vertical-align: top;
 }
-table.plain th, table.plain td {
+table.plain th,
+table.plain td {
   border: 1px solid #ddd;
 }
-table.listing td.listingCheckbox, table.listing th.listingCheckbox {
+table.listing td.listingCheckbox,
+table.listing th.listingCheckbox {
   text-align: center;
 }
 table.listing {
@@ -970,7 +1003,8 @@ table.vertical td {
   padding: 0.5em;
 }
 /* Grid table listings */
-table.grid td, table.grid th {
+table.grid td,
+table.grid th {
   border: 1px solid #e7e7e7;
   padding: 0.5em;
 }
@@ -1010,7 +1044,8 @@ dl.portalMessage {
   background-color: #ffffe3;
   clear: both;
 }
-dl.portalMessage a, #content dl.portalMessage a {
+dl.portalMessage a,
+#content dl.portalMessage a {
   color: black;
   border-bottom: 1px solid #888;
 }
@@ -1088,7 +1123,8 @@ dl.error dd {
   color: White;
 }
 /* Shared CSS between the two tab types */
-#edit-bar, #content ul.formTabs {
+#edit-bar,
+#content ul.formTabs {
   display: block;
   border-style: solid solid none solid;
   margin-left: 0;
@@ -1106,19 +1142,22 @@ dl.error dd {
   padding: 0;
   font-size: 12px;
 }
-#content-views a, #content li.formTab a {
+#content-views a,
+#content li.formTab a {
   /* this isn't supported by all browsers, so we keep it in a separate rule */
 
   display: inline-block;
 }
-#content-views a, #content li.formTab a {
+#content-views a,
+#content li.formTab a {
   line-height: 2em;
   padding: 0 0.75em;
   text-decoration: none;
   border: none;
   margin: 0 ;
 }
-#content-views li.selected a, #content li.formTab a.selected {
+#content-views li.selected a,
+#content li.formTab a.selected {
   font-weight: bold;
 }
 #content-views li.selected a,
@@ -1172,12 +1211,16 @@ dl.error dd {
   padding-top: 0.5em;
 }
 #portal-personaltools dd {
-  background: #e3e3e3;
+  background: #3d64a8;
   padding-bottom: 0.5em;
 }
 #portal-personaltools dd a {
   line-height: 2em;
   padding: 0 0.75em;
+  color: #fff;
+}
+#portal-personaltools #user-name {
+  color: #ffffff;
 }
 #portal-personaltools dd a:hover {
   background: #205c90;
@@ -1185,7 +1228,8 @@ dl.error dd {
 }
 /* @end */
 /* @group Content pulldowns */
-#contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
   background-color: #000000;
   color: White;
   z-index: 5;
@@ -1194,14 +1238,16 @@ dl.error dd {
   border-bottom: 0.5em solid #000000;
   right: -3px;
 }
-#contentActionMenus dl.actionMenu.activated dd a:hover, #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+#contentActionMenus dl.actionMenu.activated dd a:hover,
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
   background-color: White !important;
   color: #666;
 }
 #contentActionMenus dl.actionMenu {
   line-height: 2em;
 }
-#folderHeader, #contextHeader {
+#folderHeader,
+#contextHeader {
   border-bottom: 2px solid white;
 }
 #contextHeader {
@@ -1232,7 +1278,8 @@ dl.actionMenu {
   position: relative;
   margin-left: 0.5em;
 }
-dl.actionMenu a, dl.actionMenu div {
+dl.actionMenu a,
+dl.actionMenu div {
   display: block !important;
   white-space: nowrap;
 }
@@ -1259,7 +1306,9 @@ dl.actionMenu.activated dd {
   -moz-border-radius-bottomleft: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
 }
-dl.actionMenu.activated dt a, dl.actionMenu.activated dd a, dl.actionMenu.activated dd div {
+dl.actionMenu.activated dt a,
+dl.actionMenu.activated dd a,
+dl.actionMenu.activated dd div {
   margin: 0 0.25em;
 }
 /* @end */
@@ -1320,7 +1369,8 @@ dl.actionMenu.activated dt a, dl.actionMenu.activated dd a, dl.actionMenu.activa
 table.controlpanel-listing {
   width: 100%;
 }
-table.controlpanel-listing td, table.controlpanel-listing th {
+table.controlpanel-listing td,
+table.controlpanel-listing th {
   font-size: 120%;
 }
 table.controlpanel-listing dl {
@@ -1355,7 +1405,8 @@ table.controlpanel-listing th.smallcolumn {
 .rule-element dl dd {
   margin-left: 1em;
 }
-.rule-updown, .rule-operations {
+.rule-updown,
+.rule-operations {
   float: right;
   padding-top: 0.8em;
 }
@@ -1393,7 +1444,8 @@ table.controlpanel-listing th.smallcolumn {
   font-weight: normal;
 }
 /* @end */
-.reviewHistory, .contentHistory {
+.reviewHistory,
+.contentHistory {
   display: inline;
   color: Black;
 }
@@ -1455,7 +1507,9 @@ input.searchPage {
 }
 /*note: the tricky thing here is that image-inline|image-left|image-right
 can both be on an image and a wrapper element e.g. a dl tag*/
-img.image-left, img.image-right, .captioned img {
+img.image-left,
+img.image-right,
+.captioned img {
   border: 1px solid #ddd;
 }
 dd.image-caption {
@@ -1511,14 +1565,16 @@ dd.image-caption {
 }
 /* @end */
 /* @group Forms */
-fieldset, .editionComment {
+fieldset,
+.editionComment {
   line-height: 1.5em;
   margin: 1em 0;
   padding: 0 1em 1em;
   width: auto;
 }
 /* Emulates the styling from the h1 tag */
-#content .field input[type="text"][name$=".title"], #archetypes-fieldname-title input {
+#content .field input[type="text"][name$=".title"],
+#archetypes-fieldname-title input {
   font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
   line-height: 125%;
   color: Black;
@@ -1530,7 +1586,8 @@ fieldset, .editionComment {
   font-weight: bold;
 }
 /* Emulates styling from the description's view */
-#content .field textarea[name$=".description"], #archetypes-fieldname-description textarea#description {
+#content .field textarea[name$=".description"],
+#archetypes-fieldname-description textarea#description {
   font-family: Arial, FreeSans, sans-serif;
   color: #666666;
   font-size: 1.25em;
@@ -1539,7 +1596,9 @@ fieldset, .editionComment {
 div.formControls {
   margin: 1em;
 }
-input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
   background-color: #ffffe0;
 }
 #content textarea {
@@ -1591,10 +1650,12 @@ dl.enableFormTabbing dd {
   /*width: 100%;*/
 
 }
-.field input[type="text"][name$=".title"], input#title {
+.field input[type="text"][name$=".title"],
+input#title {
   width: 100%;
 }
-.field.error input[type="text"][name$=".title"], .error input#title {
+.field.error input[type="text"][name$=".title"],
+.error input#title {
   width: 99%;
 }
 .fieldRequired {
@@ -1640,10 +1701,12 @@ textarea#form\.description {
   height: 6em;
   width: 99%;
 }
-table.listing tbody tr.odd.selected td, tr.selected {
+table.listing tbody tr.odd.selected td,
+tr.selected {
   background-color: #ffa;
 }
-.btn, input[type=submit] {
+.btn,
+input[type=submit] {
   cursor: pointer;
   display: inline-block;
   background-color: #e6e6e6;
@@ -1674,15 +1737,18 @@ table.listing tbody tr.odd.selected td, tr.selected {
   -o-transition: 0.1s linear all;
   transition: 0.1s linear all;
 }
-.btn:hover, input[type=submit]:hover {
+.btn:hover,
+input[type=submit]:hover {
   background-position: 0 -15px;
   color: #333;
   text-decoration: none;
 }
-.btn:focus, input[type=submit]:focus {
+.btn:focus,
+input[type=submit]:focus {
   outline: 1px dotted #666;
 }
-.btn.primary, input[type=submit].primary {
+.btn.primary,
+input[type=submit].primary {
   color: #ffffff !important;
   background-color: #0064cd;
   background-repeat: repeat-x;
@@ -1698,7 +1764,8 @@ table.listing tbody tr.odd.selected td, tr.selected {
   border-color: #0064cd #0064cd #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
-.btn.cta, input[type=submit].cta {
+.btn.cta,
+input[type=submit].cta {
   color: #ffffff !important;
   background-color: #000000;
   background-repeat: repeat-x;
@@ -1722,7 +1789,8 @@ input[type=submit] :active {
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-.btn.disabled, input[type=submit].disabled {
+.btn.disabled,
+input[type=submit].disabled {
   cursor: default;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1734,7 +1802,8 @@ input[type=submit] :active {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.btn[disabled], input[type=submit][disabled] {
+.btn[disabled],
+input[type=submit][disabled] {
   cursor: default;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1746,7 +1815,8 @@ input[type=submit] :active {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.btn.large, input[type=submit].large {
+.btn.large,
+input[type=submit].large {
   font-size: 15px;
   line-height: normal;
   padding: 9px 14px 9px;
@@ -1754,14 +1824,17 @@ input[type=submit] :active {
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-.btn.small, input[type=submit].small {
+.btn.small,
+input[type=submit].small {
   padding: 7px 9px 7px;
   font-size: 11px;
 }
-:root .alert-message, :root .btn {
+:root .alert-message,
+:root .btn {
   border-radius: 0 \0;
 }
-button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
+button.btn::-moz-focus-inner,
+input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
@@ -1772,24 +1845,30 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   float: left;
 }
 /* @group Login form */
-body.template-logged_out #content, body.template-login_form #content, .pb-ajax #login-form {
+body.template-logged_out #content,
+body.template-login_form #content,
+.pb-ajax #login-form {
   text-align: center;
 }
-#fieldset-openid-login input, #login-form input {
+#fieldset-openid-login input,
+#login-form input {
   font-size: 150%;
 }
-body.template-register #content input, body.template-new-user #content input {
+body.template-register #content input,
+body.template-new-user #content input {
   font-size: 150%;
   width: inherit;
 }
-#fieldset-openid-login label, #login-form label {
+#fieldset-openid-login label,
+#login-form label {
   margin-right: 0.5em;
   padding-top: 0.2em;
   text-align: right;
   width: 10em;
   display: inline-block;
 }
-#fieldset-openid-login .formControls input, #login-form .formControls input {
+#fieldset-openid-login .formControls input,
+#login-form .formControls input {
   margin-left: 0.25em;
 }
 /* @end */
@@ -1806,7 +1885,8 @@ div.overlay {
   margin: 1em;
   font-size: 80%;
 }
-div.overlay-iframe, div.overlay-ajax {
+div.overlay-iframe,
+div.overlay-ajax {
   width: 60%;
   min-height: 100px;
   z-index: 99;
@@ -1817,7 +1897,8 @@ div.overlay-iframe {
   height: 60%;
 }
 /* default close button positioned on upper-left corner */
-div.overlaybg div.close, div.overlay div.close {
+div.overlaybg div.close,
+div.overlay div.close {
   background-image: url(../images/pb_close.png);
   position: absolute;
   left: -14px;
@@ -1829,7 +1910,8 @@ div.overlaybg div.close, div.overlay div.close {
 .pb-ajax {
   overflow-y: auto;
 }
-.pb-ajax, .pb-image {
+.pb-ajax,
+.pb-image {
   background-color: #fff;
   border: 1px solid #999;
   white-space: normal;
@@ -2012,7 +2094,8 @@ div.overlay .formControls a {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.alert-message.block-message ul, .alert-message.block-message p {
+.alert-message.block-message ul,
+.alert-message.block-message p {
   margin-right: 30px;
 }
 .alert-message.block-message ul {
@@ -2024,7 +2107,9 @@ div.overlay .formControls a {
 .alert-message.block-message .alert-actions {
   margin-top: 5px;
 }
-.alert-message.block-message.error, .alert-message.block-message.success, .alert-message.block-message.info {
+.alert-message.block-message.error,
+.alert-message.block-message.success,
+.alert-message.block-message.info {
   color: #404040;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
@@ -2070,7 +2155,7 @@ div.overlay .formControls a {
   width: 940px;
   color: #3D64A8;
   text-align: center;
-  background: url(../images/dotted.gif) repeat-x 0px 0px white;
+  background: url(../images/dotted.gif) repeat-x 0px 0px #ffffff;
 }
 #footer a {
   color: #3D64A8;
@@ -2164,7 +2249,8 @@ div.overlay .formControls a {
   margin-bottom: 1px;
   margin-left: 0;
 }
-#content #selectedTags, #content #newTags {
+#content #selectedTags,
+#content #newTags {
   margin-bottom: 0;
   margin-left: 0;
 }
@@ -2181,13 +2267,16 @@ div.overlay .formControls a {
 #content p.selectedTag {
   margin-bottom: .4em;
 }
-#existingTagsTitle, #newTagsTitle {
+#existingTagsTitle,
+#newTagsTitle {
   float: left;
 }
-#existingTagsHelp, #newTagsHelp {
+#existingTagsHelp,
+#newTagsHelp {
   float: right;
 }
-#noTagsSelected, #oneOrMoreTagsSelected {
+#noTagsSelected,
+#oneOrMoreTagsSelected {
   display: none;
 }
 /* @end */

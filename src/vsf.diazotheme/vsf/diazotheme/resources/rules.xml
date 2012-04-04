@@ -46,8 +46,9 @@
         
         <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 	    
-	    <replace css:content="#portal-personaltools-wrapper" css:theme-children="#personal-tools"
-	        css:if-content="#user-name" />
+	    <!--<replace css:content="#portal-personaltools-wrapper" css:theme-children="#personal-tools"
+	        css:if-content="#user-name" />-->
+        <replace css:content="#portal-personaltools-wrapper" css:theme-children="#personal-tools" />
 	    <replace css:content="#portal-siteactions" css:theme="#actions" />
 	    
 	    <!-- navigation -->
@@ -62,6 +63,7 @@
         <before css:content="#edit-bar" css:theme="#main-content" />
         <before css:content=".portalMessage" css:theme="#content" />
         
+        <before css:content="#portal-personaltools-wrapper" css:theme="#sidebar" />
         <!-- Portal Columns -->
         <replace css:content-children="#portal-column-one > *" css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *" css:theme-children="#sidebar" />

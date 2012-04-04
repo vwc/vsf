@@ -68,6 +68,7 @@
                     <th>Dateiname</th>
                     <th>Datum</th>
                     <th>&nbsp;</th>
+                    <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
@@ -80,6 +81,11 @@
                     </td>
                     <td><a href="" tal:attributes="href item/getURL"
                           class="btn primary">Download</a>
+                    </td>
+                    <td><a href=""
+                            tal:define="item_url item/getURL"
+                            tal:attributes="href python:item_url + '/delete_confirmation'"
+                            class="btn popoverForm">L&ouml;schen</a>
                     </td>
                 </tr>
                 </tal:block>

@@ -95,7 +95,7 @@ var common_content_filter = '#content>*:not(div.configlet),dl.portalMessage.erro
                 return location.href
             }
         });
-        $('a.popoverForm').prepOverlay({
+        $('a.popoverForm, #siteaction-login a').prepOverlay({
             subtype: 'ajax',
             filter: common_content_filter,
             // Add this to a link or button to make it close the overlay e.g.

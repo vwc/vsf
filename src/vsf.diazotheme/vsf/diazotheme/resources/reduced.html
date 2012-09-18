@@ -1,38 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example Theme, based on Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<title>Site Title</title>
-    <base href="#" />
-    <link rel="stylesheet" href="css/grid16.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    <!-- Le styles -->
+    <link href="less/styles.less" rel="stylesheet/less" type="text/css">
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="css/grid16.css" type="text/css" media="screen" />
-    <link href="css/styles.less" rel="stylesheet/less" type="text/css" />
-    <script type="text/javascript" src="js/modernizr.js"></script>
-    <script type="text/javascript" src="js/less-1.1.3.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-    <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"></script>
-</head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+  </head>
 <body>
-
-<div id="outer-wrapper">
-    <div id="editbar-wrapper" class="navbar navbar-fixed-top">
+<header id="editbar-wrapper" class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container-fluid" id="editbar">
         <a class="brand" href="#">Plone CMSUI Editbar</a>
         <!-- Plone CMS Editbar inserted as a toolbar -->
       </div>
     </div>
-    </div>
+</header>
+
+<div id="outer-wrapper">
 <div id="inner-wrapper">
 <div id="top-wrapper">
 <div id="header-wrapper">
@@ -50,13 +47,10 @@
     </div>
 </div>
 </div>
-<div id="editbar-wrapper">
-    <div id="editbar"></div>
-</div>
 <div id="content-wrapper">
 <div id="main-content">
     <div class="row">
-        <div class="cell position-0 width-3:4">
+        <div class="span9">
             <div id="content">
                 <h1 class="documentFirstHeading">Document First Heading</h1>
                 <p class="documentDescription">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -80,7 +74,7 @@
             </div>
             <div class="visualClear">&nbsp;</div>
         </div>
-        <div class="cell width-1:4 position-3:4">
+        <div class="span3">
             <div id="sidebar" class="visualClear">
                 <div class="splashBox blue">
                     <div class="splashBoxContent">

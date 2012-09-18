@@ -1,97 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example Theme, based on Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<title>Site Title</title>
-    <base href="#" />
-    <link rel="stylesheet" href="css/grid16.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    <!-- Le styles -->
+    <link href="less/styles.less" rel="stylesheet/less" type="text/css">
+    <!-- Responsive styles - enable if necessary -->
+    <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="css/grid16.css" type="text/css" media="screen" />
-    <link href="css/styles.less" rel="stylesheet/less" type="text/css" />
-    <script type="text/javascript" src="js/modernizr.js"></script>
-    <script type="text/javascript" src="js/less-1.1.3.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-    <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"></script>
-</head>
-<body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+  </head>
 
-<div id="outer-wrapper">
-<div id="inner-wrapper">
-    <div id="personal-tools"></div>
-<div id="top-wrapper">
-<div id="header-wrapper">
-    <div id="header">
-        
-        <div id="navigation">
-            <ul id="main-nav">
-                <li><a href=".">1st Section</a></li>
-                <li><a href=".">2nd Section</a></li>
-                <li><a href=".">3rd Section</a></li>
-                <li><a href=".">4th Section</a></li>
-            </ul>
+  <body>
+
+    <header id="topbar">
+      <div id="editbar-wrapper" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container-fluid" id="editbar">
+            <a class="brand" href="#">Plone CMSUI Editbar</a>
+            <!-- Plone CMS Editbar inserted as a toolbar -->
+          </div>
         </div>
-        <a href="/" id="logo">Logo</a>
-    <div class="visualClear"><!-- --></div>
-    </div>
-</div>
-</div>
-<div id="editbar-wrapper">
-    <div id="editbar"></div>
-</div>
-<div id="content-wrapper">
-<div id="main-content">
+      </div>
 
-            <div id="content">
-                <h1 class="documentFirstHeading">Document First Heading</h1>
-                <p class="documentDescription">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <h2>Document Second Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <p><span class="discreet">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</span></p>
-                <p class="pullquote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.</p>
-                <ul>
-                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                <li>Aenean  commodo ligula eget dolor.  Aenean massa.</li>
-                <li>Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <h3>Document Third Heading</h3>
-                <pre>import unittest<br />from mth.sitepolicy.test.base import MthSitepolicyTestCase<br /><br />from Products.CMFCore.utils import getToolByName<br /><br />class TestSetup(MthSitepolicyTestCase):<br /><br /> def test_portal_title(self):<br /> self.assertEquals("MeinTophotel.de", self.portal.getProperty('title'))</pre>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <p><span class="visualHighlight">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</span></p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <p class="callout">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                
-            </div>
-            <div class="visualClear">&nbsp;</div>
-    
-<footer>
-    <div id="actions">
-        site actions
-    </div>
-    <div id="footer">
-	<p>
-    Volksschule Fischach-Langenneufnach   <span class="tild-orange">|</span>   
-    M&uuml;hlstr. 15   86850 Fischach   <span class="tild-orange">|</span>   Tel.: 08236 1054   <span class="tild-orange">|</span>
-       Fax: 08236 1059   <span class="tild-orange">|</span>   
-    <a href="mailto:info@vs-fischach.de">
-    	info@vs-fischach.de</a>
-    </p>
-	</div>
-</footer>
-</div>
-</div>
-<div style="clear:both"><!-- --></div>
-</div><!-- end inner-wrapper -->
-<div id="push"></div>
-</div> <!-- end outer-wrapper -->
-</body>
+      <!-- Twitter boostrap based default navigation -->
+      <nav class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Project name</a>
+            <div class="nav-collapse">
+              <ul class="nav" id="main-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container">
+      <div id="content">
+        <h1>Starter template <small>The barebone minimal</small></h1>
+        <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+      </div>
+    </section> <!-- /container -->
+
+    <footer id="site-footer">
+      <div class="container">
+        <p>&copy; ACME Corp. 2012</p>
+      </div>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/application.js"></script>
+
+  </body>
 </html>

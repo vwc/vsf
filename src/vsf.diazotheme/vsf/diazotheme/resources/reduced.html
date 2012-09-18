@@ -20,20 +20,18 @@
     <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
   </head>
 <body>
-<header id="editbar-wrapper" class="navbar navbar-static-top">
+<header>
+<div id="editbar-wrapper" class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container-fluid" id="editbar">
         <a class="brand" href="#">Plone CMSUI Editbar</a>
         <!-- Plone CMS Editbar inserted as a toolbar -->
       </div>
     </div>
-</header>
-
-<div id="outer-wrapper">
-<div id="inner-wrapper">
-<div id="top-wrapper">
+</div>
+<div id="top-wrapper" class="container">
 <div id="header-wrapper">
-    <div id="header">
+    <div id="header">     
         <div id="navigation">
             <ul id="main-nav">
                 <li><a href=".">1st Section</a></li>
@@ -47,9 +45,12 @@
     </div>
 </div>
 </div>
-<div id="content-wrapper">
+</header>
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+<div id="content-wrapper" class="container">
 <div id="main-content">
-    <div class="row">
+    <div class="row-fluid">
         <div class="span9">
             <div id="content">
                 <h1 class="documentFirstHeading">Document First Heading</h1>

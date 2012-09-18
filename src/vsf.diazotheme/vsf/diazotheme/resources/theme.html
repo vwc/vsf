@@ -24,9 +24,8 @@
 </head>
 <body>
 
-<div id="outer-wrapper">
-<div id="inner-wrapper">
-<div id="editbar-wrapper" class="navbar navbar-fixed-top">
+<header>
+<div id="editbar-wrapper" class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container-fluid" id="editbar">
         <a class="brand" href="#">Plone CMSUI Editbar</a>
@@ -34,12 +33,9 @@
       </div>
     </div>
 </div>
-
-    <div id="personal-tools"></div>
-<div id="top-wrapper">
+<div id="top-wrapper" class="container">
 <div id="header-wrapper">
-    <div id="header">
-        
+    <div id="header">     
         <div id="navigation">
             <ul id="main-nav">
                 <li><a href=".">1st Section</a></li>
@@ -53,13 +49,14 @@
     </div>
 </div>
 </div>
-<div id="editbar-wrapper">
-    <div id="editbar"></div>
-</div>
-<div id="content-wrapper">
+</header>
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+
+<div id="content-wrapper" class="container">
 <div id="main-content">
-    <div class="row">
-        <div class="cell position-0 width-1:4">
+    <div class="row-fluid">
+        <div class="span3">
             <div id="sidebar-left">
                 <div class="splashBox blue">
                     <div class="splashBoxContent">
@@ -79,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="cell position-1:4 width-1:2">
+        <div class="span6">
             <div id="content">
                 <h1 class="documentFirstHeading">Document First Heading</h1>
                 <p class="documentDescription">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean  commodo ligula eget dolor.  Aenean massa.  Cum sociis natoque penatibus  et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -103,7 +100,7 @@
             </div>
             <div class="visualClear">&nbsp;</div>
         </div>
-        <div class="cell width-1:4 position-3:4">
+        <div class="span3">
             <div id="sidebar" class="visualClear">
                 <div class="splashBox blue">
                     <div class="splashBoxContent">

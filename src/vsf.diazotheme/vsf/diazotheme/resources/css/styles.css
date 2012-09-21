@@ -5033,7 +5033,7 @@ div.overlay-iframe {
 /* default close button positioned on upper-left corner */
 div.overlaybg div.close,
 div.overlay div.close {
-  background-image: url(../img/pb_close.png);
+  background-image: url(../images/pb_close.png);
   position: absolute;
   left: -14px;
   top: -14px;
@@ -6462,7 +6462,7 @@ dd.image-caption {
 #portal-siteactions {
   float: none;
   text-align: center;
-  margin-bottom: -5px;
+  margin-bottom: -8px;
   background-color: white;
   list-style: none;
 }
@@ -6486,7 +6486,7 @@ dd.image-caption {
   background: white;
 }
 #portal-siteactions li a:hover {
-  border: 1px solid white;
+  border: 0px solid white;
   background: transparent;
   color: black;
 }

@@ -100,7 +100,7 @@ var common_content_filter = '#content>*:not(div.configlet),dl.portalMessage.erro
             filter: common_content_filter,
             // Add this to a link or button to make it close the overlay e.g.
             // on cancel without reloading the page
-            closeselector: '[name=form.button.Cancel], [name=form.buttons.cancel]',
+            closeselector: 'a.closePopover',
             formselector: 'form.overlayForm,form.edit-form, form',
             noform: 'redirect',
             cssclass:'popover-view',

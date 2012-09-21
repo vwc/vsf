@@ -49,6 +49,8 @@
         <!-- CMSUI Editbar replacements -->
         <drop css:theme="#editbar-wrapper"
             css:if-content="#anon-personalbar" />
+        <drop css:theme="#editbar-wrapper"
+            css:if-content="body.section-Members" />
         <replace css:theme="#editbar-wrapper"
             css:content="#toolbar" />
 

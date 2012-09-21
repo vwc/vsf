@@ -25,17 +25,18 @@
     <tal:block tal:condition="view/is_owner">
         <div class="alert-message block-message notice fade in" data-alert="alert"
             tal:condition="not:context/text">
-            <p><strong>Willkommen <span tal:replace="name" /></strong></p>
+            <h3>Willkommen <span tal:replace="name" /></h3>
             <p>Ihr Benutzerordner wurde erfolgreich erstellt.</p>
             <p>Da Sie Ihren Benutzerordner zum ersten Mal besuchen, sollten
                 Sie zun&auml;chst einige Informationen hinterlegen.</p>
-                    <a href="" class="btn small popoverForm"
+            <p><a href="" class="btn small popoverForm"
                         tal:attributes="href python:portal_url+'/@@personal-information'">
                         Pers&ouml;nliche Informationen bearbeiten</a>
                     <a href="" class="btn small popoverForm"
                         tal:attributes="href python:here_url+'/@@edit'">Benutzerordner bearbeiten</a>
+            </p>
         </div>
-        <div class="alert-message block-message notice fade in">
+        <div class="alert alert-block">
             <p><strong>Willkommen <span tal:replace="name" />,<br />
                 dies ist Ihr Benutzerordner/Arbeitsbereich.</strong></p>
             <p>Verwenden Sie die Aktionsbox auf der rechten

@@ -9,5 +9,6 @@
             // enhancement.
             return;
         }
+        $('a[data-appui="gallery"').prettyPhoto();
     });
 }(jQuery));

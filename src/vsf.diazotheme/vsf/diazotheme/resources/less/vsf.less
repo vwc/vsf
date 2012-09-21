@@ -554,6 +554,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     line-height: 1.5em;
     clear: both;
     margin: 1em 0.25em 2em 0.25em;
+    padding: @baseLineHeight / 2;
 }
 
 /* Special case of #content - TinyMCE */
@@ -1015,15 +1016,16 @@ dd.image-caption {
     float: left;
     position:relative;
     overflow: hidden;
-    height: 185px;
-    width: 195px;
+    height: 175px;
+    width: 175px;
     margin: 0 10px 10px 0;
     padding: 0px 6px 0px 9px;
     text-align: center;
     //background-image: url(../images/polaroid-single.png);
     //background-repeat: no-repeat;
-    border: 1px solid @gray;
-    .border-radius(4px);
+    //border: 1px solid @gray;
+    //.border-radius(4px);
+    .thumbnail();
 }
 .photoAlbumEntry img {
     border: 1px solid #ccc;
@@ -1055,6 +1057,9 @@ dd.image-caption {
     height: 3.6em;
 }
 
+.media-gallery-row {
+    padding: @baseLineHeight / 2 0;
+}
 
 /* @end */
 

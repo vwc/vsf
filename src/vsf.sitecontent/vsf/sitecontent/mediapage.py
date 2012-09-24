@@ -1,6 +1,8 @@
 import math
 from five import grok
 from Acquisition import aq_inner
+
+from zope import schema
 from zope.component import getMultiAdapter
 
 from plone.directives import dexterity, form
@@ -22,6 +24,13 @@ class IMediaPage(form.Schema, IImageScaleTraversable):
     """
     text = RichText(
         title=_(u"Text"),
+        required=True
+    )
+    show_gallery = schema.Bool(
+        title=_(u"Show gallery?"),
+        description=_(u"Select if you want the images contained in this "
+                      u"mediapage to display as gallery."),
+        default=True,
         required=True
     )
 

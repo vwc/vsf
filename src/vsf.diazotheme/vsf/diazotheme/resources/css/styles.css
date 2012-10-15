@@ -5690,7 +5690,7 @@ body {
   width: 600px;
   float: right;
   border: 0px solid red;
-  margin-top: 156px;
+  margin: 156px 0 0;
   list-style: none;
 }
 #navigation a {
@@ -5722,7 +5722,7 @@ body {
   border: 0px solid white;
   /**     border-top-width: 1px; **/
 
-  font-size: 13px;
+  font-size: 12px;
   color: white;
   border-bottom-width: 1px;
   margin: 0px 0px 0px 0px;

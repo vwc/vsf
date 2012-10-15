@@ -13,32 +13,34 @@
     <div tal:condition="context/text"
       tal:content="structure context/text/output" />
 
-    <div class="media-gallery" id="mediapage-gallery"
-          tal:condition="view/has_images">
-          <div class="items">
-            <tal:block tal:repeat="row view/image_matrix">
-              <div class="media-gallery-row">
-                <tal:thumbs tal:repeat="cell row">
-                  <tal:thumb tal:define="item cell/item">
-                    <a href=""
-                      data-appui="gallery"
-                      class="prettyPhoto[media-gallery]"
-                      rel="prettyPhoto[media-gallery]"
-                      tal:attributes="href item/original_url">
-                    <img class="img-polaroid"
-                      tal:attributes="src python:item['thumb_url'];
-                                      width item/thumb_width;
-                                      height item/thumb_height;
-                                      data-image-url item/original_url;
-                                      data-image-width item/original_width;
-                                      data-image-height item/original_height" />
-                    </a>
-                  </tal:thumb>
-                </tal:thumbs>
-              </div>
-            </tal:block>
-          </div>
-    </div>
+    <tal:gallery tal:condition="context/show_gallery">
+      <div class="media-gallery" id="mediapage-gallery"
+            tal:condition="view/has_images">
+            <div class="items">
+              <tal:block tal:repeat="row view/image_matrix">
+                <div class="media-gallery-row">
+                  <tal:thumbs tal:repeat="cell row">
+                    <tal:thumb tal:define="item cell/item">
+                      <a href=""
+                        data-appui="gallery"
+                        class="prettyPhoto[media-gallery]"
+                        rel="prettyPhoto[media-gallery]"
+                        tal:attributes="href item/original_url">
+                      <img class="img-polaroid"
+                        tal:attributes="src python:item['thumb_url'];
+                                        width item/thumb_width;
+                                        height item/thumb_height;
+                                        data-image-url item/original_url;
+                                        data-image-width item/original_width;
+                                        data-image-height item/original_height" />
+                      </a>
+                    </tal:thumb>
+                  </tal:thumbs>
+                </div>
+              </tal:block>
+            </div>
+      </div>
+    </tal:gallery>
     
   </metal:content-core>
 </metal:main>
